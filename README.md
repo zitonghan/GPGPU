@@ -10,4 +10,4 @@
 ## Test Folder
 1. IN1文件是warp scheduler中Task ram的初始化文件（十六进制），由于测试文件为在一个16x16的方格中画圆，因此分成256个thread,一个warp分配8个thread,因此总共32个task.因此文件中前32行MSB为1，表示valid task
 2. IN2是I_cache初始文件
-3. IN3是D_cache初始文件，这三个文件都是通过uart发送至上述module各自的mem中，FPGA运行结束后再将mem中内容发回，因此result_Test3中显示了GPU运行后D_cache中的内容，文件中一行256bit,8个word,16x16画圆因此将result_Test3中每两行重置为1行即可看到画出的圆形，展示在
+3. IN3是D_cache初始文件，这三个文件都是通过uart发送至上述module各自的mem中，FPGA运行结束后再将mem中内容发回，因此result_Test3中显示了GPU运行后D_cache中的内容，文件中一行256bit,8个word,16x16画圆因此将result_Test3中每两行重置为1行即可看到画出的圆形，展示在mem_draw.txt文件中.
